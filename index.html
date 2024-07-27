@@ -1,58 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="the personal website of manojkgorle" />
 
-  <title>manojkgorle</title>
+  <title>Monal Gupta</title>
 
   <link rel="stylesheet" href="styles.css" />
- </head>
+</head>
 
- <body>
+<body>
   <div id="preamble">
-   <a href="https://github.com/manojkgorle"><h1 class="title">manojkgorle</h1></a>
+    <a href="https://github.com/monalgupta03">
+      <h1 class="title">Monal Gupta</h1>
+    </a>
 
-   <h2 class="subtitle" style="margin-bottom: 35px;">
-    contact me via
-    <a href="mailto:manoj@nodekit.xyz">email</a> or view my
-    <a href="https://github.com/manojkgorle">github</a>
-    &amp; <a href="https://twitter.com/manojkgorle">twitter</a>
-   </h2>
+    <h2 class="subtitle" style="margin-bottom: 35px;">
+      contact me via
+      <a href="mailto:monalmehal@gmail.com">email</a> or view my
+      <a href="https://github.com/monalgupta03">github</a>
+      &amp; <a href="https://twitter.com/monalgupta03">twitter</a>
+    </h2>
   </div>
   <div>
-    <p style="margin-bottom: 40px; text-align: center;">undergrad at <a href="https://home.iitd.ac.in">IIT Delhi</a> &amp; developer at <a href="https://nodekit.xyz">nodekit</a></p>
+    <!-- <p style="margin-bottom: 40px; text-align: center;">undergrad at <a href="https://home.iitd.ac.in">IIT Delhi</a></p> -->
 
-   <div>
-    <h2>I am interested on</h2>
     <div>
-      <ul>
-        <li>Zero Knowledge &amp; Provable Computation</li>
-        <li>Distributed Systems</li>
-        <li>Game theory</li>
-        <li>Space and Time Complexity</li>
-        <li>Nano materials</li>
-      </ul>
-    </div>
-    <div>
+      <h2>I am interested on</h2>
+      <div>
+        <p> Hi there👋</p>
+        <p>
+          Myself Monal Gupta, a Senior undergrad at Indian Institute of Technology Delhi, India. </p>
+        <p>
+          Am a seasoned web2 &amp; web3 developer interested in harnessing power of 3.js to bring in a relistic touch in
+          the web
+          world. In addition to the technical part, am also an avid Blender user. </p>
+        <p>
+          Furthermore, I am also the Overall Coordinator for the Blockchain Society, IITD for the tenure 2024-25</p>
+        <!-- <ul>
+          <li>Zero Knowledge &amp; Provable Computation</li>
+          <li>Distributed Systems</li>
+          <li>Game theory</li>
+          <li>Space and Time Complexity</li>
+          <li>Nano materials</li>
+        </ul> -->
+      </div>
+      <!-- <div>
       <h2>Writings</h2>
       <div>
         <ul>
           <li><a href="https://hackmd.io/@manojkgorle/quark-layer">Unveiling Quark Layer</a>: Exploring possiblities of a cryptoeconomic proof aggregation layer.</li>
         </ul>
       </div>
+    </div> -->
+      <h2>Projects</h2>
+      <div>
+        <ul>
+          <li><a>Mandelbrot-Set-Generator</a>: Generating 1000x1000 px Mandelbrot-Set figure, 3.78 sec in Python. </li>
+          <li><a href="https://github.com/monalgupta03/team-chitkul">Devy (EthMumbai Proj) </a>: streamline background
+            checks by issuing Soul Bound Tokens (SBTs) to employees from the MultiSig Wallet of employers. </li>
+          <li><a> Oc Predictive Modelling </a>: Forecasting future oeanographic treands based on past 50 years data. </li>
+          <li><a href="https://github.com/sausaging">Quark Layer</a>: Decentralised proof verification and aggregation
+            layer.</li>
+          <li><a href="https://github.com/manojkgorle/hypersdk/tree/main/examples/tokenvm">Hyperwasm</a>: Wasm runtime
+            on hypersdk.</li>
+          <li><a href="https://github.com/manojkgorle/hypersdk/tree/snac/examples/morpheusvm">Snacs</a>: Snark Accounts
+            for hyperchains using hypersdk.</li>
+          <!-- <li><a href="https://github.com/manojkgorle/precompile-evm-extended">Ende</a>: Precompile EVM extended</li> -->
+        </ul>
+      </div>
     </div>
-    <h2>Projects</h2>
-    <div>
-     <ul>
-      <li><a href="https://github.com/sausaging">Quark Layer</a>: Decentralised proof verification and aggregation layer.</li>
-      <li><a href="https://github.com/manojkgorle/hypersdk/tree/main/examples/tokenvm">Hyperwasm</a>: Wasm runtime on hypersdk.</li>
-      <li><a href="https://github.com/manojkgorle/hypersdk/tree/snac/examples/morpheusvm">Snacs</a>: Snark Accounts for hyperchains using hypersdk.</li>
-      <li><a href="https://github.com/manojkgorle/precompile-evm-extended">Ende</a>: Precompile EVM extended</li>
-     </ul>
-    </div>
-   </div>
   </div>
   <div id="theme" class="dark">
     switch to light theme
@@ -60,20 +79,21 @@
   <script>
     const theme = document.querySelector('#theme');
     theme.addEventListener('click', () => {
-     if (document.body.classList.contains('light')) {
-      document.body.classList.remove('light');
-      document.body.classList.add('dark');
-      document.getElementById("theme").innerHTML = 'switch to light theme';
-      document.body.style.backgroundColor = "black";
-      document.body.style.color = "white";
-     } else {
-      document.body.classList.remove('dark');
-      document.body.classList.add('light');
-      document.getElementById("theme").innerHTML = 'switch to dark theme';
-      document.body.style.backgroundColor = "white";
-      document.body.style.color = "black";
-     }
+      if (document.body.classList.contains('light')) {
+        document.body.classList.remove('light');
+        document.body.classList.add('dark');
+        document.getElementById("theme").innerHTML = 'switch to light theme';
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+      } else {
+        document.body.classList.remove('dark');
+        document.body.classList.add('light');
+        document.getElementById("theme").innerHTML = 'switch to dark theme';
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+      }
     });
   </script>
- </body>
+</body>
+
 </html>
