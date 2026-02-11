@@ -14,3 +14,7 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+
+
+<!-- make changes locally, npm run dev
+    once done npm run build, npm run deploy,   push source code to main  -->
