@@ -39,7 +39,7 @@ const techStack = [
 const interests = [
   'Collecting vintage postcards',
   'Urban sketching & watercolors',
-  'Reading sci-fi novels',
+  'Reading murder mystery novels',
   'Making playlists for every mood',
   'Exploring local coffee shops',
   'Film photography',
@@ -51,7 +51,7 @@ const interests = [
 const currentlyLearning = [
   'Generative art with p5.js',
   'Rust for systems programming',
-  'Japanese calligraphy basics',
+  'Lightweight cryptocraphy computation costs',
 ];
 
 /**
@@ -59,10 +59,10 @@ const currentlyLearning = [
  * Each has a platform name, URL, and corresponding Lucide icon
  */
 const socialLinks = [
-  { name: 'GitHub', url: 'https://github.com/monalgupta', icon: Github },
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/monalgupta', icon: Linkedin },
-  { name: 'YouTube', url: 'https://youtube.com/@monalgupta', icon: Youtube },
-  { name: 'Twitter', url: 'https://twitter.com/monalgupta', icon: Twitter },
+  { name: 'GitHub', url: 'https://github.com/monalgupta03', icon: Github },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/monalgupta03', icon: Linkedin },
+  { name: 'YouTube', url: 'https://youtube.com/@monalG03', icon: Youtube },
+  { name: 'Twitter', url: 'https://twitter.com/monalgupta03', icon: Twitter },
 ];
 
 // -----------------------------------------------------------------------------
@@ -115,8 +115,8 @@ const About = () => {
                 Bio
               </h2>
               <p className="text-poster-text leading-relaxed font-light">
-                Hello! I'm Monal, a creative developer based in Bristol, UK. I believe that the 
-                web is more than just a platform—it's a canvas for expression. My work sits at the 
+                Hello! I'm Monal, a computer science student based in Bristol, UK. I believe that the 
+                web is more than just a platform, it's a canvas for expression. My work sits at the 
                 intersection of technology and art, where clean code meets thoughtful design.
               </p>
               <p className="text-poster-text leading-relaxed font-light mt-4">

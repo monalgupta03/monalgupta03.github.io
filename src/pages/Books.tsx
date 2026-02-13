@@ -47,19 +47,15 @@ interface BooksByYear {
  * Newest year first for display purposes
  */
 const booksList: BooksByYear = {
-  '2025': [
-    { title: 'Designing Data-Intensive Applications', author: 'Martin Kleppmann' },
+  '2026': [
     { title: 'The Rust Programming Language', author: 'Steve Klabnik & Carol Nichols' },
+    { title: 'Crime and Punishment', author: 'Fyodor Dostoevsky' },
   ],
-  '2024': [
-    { title: 'Clean Architecture', author: 'Robert C. Martin' },
+  '2025': [
+    { title: 'A Thousand Splendid Suns', author: 'Khaled Hosseini' },
     { title: 'System Design Interview', author: 'Alex Xu' },
     { title: 'The Phoenix Project', author: 'Gene Kim' },
     { title: 'Atomic Habits', author: 'James Clear' },
-  ],
-  '2023': [
-    { title: 'Deep Work', author: 'Cal Newport' },
-    { title: 'The Pragmatic Programmer', author: 'David Thomas & Andrew Hunt' },
     { title: 'Site Reliability Engineering', author: 'Google SRE Team' },
   ],
 };
@@ -125,8 +121,8 @@ const Books = () => {
           <h1 className="text-3xl md:text-4xl font-serif text-poster-text mb-4">Books</h1>
           
           {/* Page description */}
-          <p className="text-poster-muted font-light mb-16 max-w-xl">
-            Books that have shaped my thinking and skills over the years.
+          <p className="text-poster-muted font-light mb-16 max-w-2xl">
+            Books that have shaped my thinking and skills over the years. (2026 Goals: 12+ books)
           </p>
 
           {/* Book list grouped by year */}

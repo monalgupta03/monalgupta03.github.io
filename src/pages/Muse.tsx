@@ -16,6 +16,7 @@
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import ThemeToggle from '@/components/ThemeToggle';
+import CoffeePoster from '@/assets/Muse/coffee.jpg';
 
 // -----------------------------------------------------------------------------
 // MOOD BOARD DATA
@@ -45,6 +46,7 @@ const moodBoardItems = [
   {
     type: 'image',
     size: 'small',
+    image: CoffeePoster,
     placeholder: 'Cozy café corner',
   },
   {
@@ -113,10 +115,10 @@ const Muse = () => {
     <div className="min-h-screen py-20 px-6 md:px-12">
       {/* Navigation bar - fixed position top right */}
       <Navigation />
-      
+
       {/* Theme toggle - fixed position bottom right */}
       <ThemeToggle />
-      
+
       {/* Main content container */}
       <div className="max-w-6xl mx-auto pt-12">
         {/* Page header */}
@@ -132,7 +134,7 @@ const Muse = () => {
           </h1>
           {/* Page description */}
           <p className="text-poster-muted font-light max-w-xl">
-            A collection of textures, colors, and words that inspire my work. 
+            A collection of textures, colors, and words that inspire my work.
             A digital mood board of warmth and wonder.
           </p>
         </motion.div>
@@ -149,10 +151,14 @@ const Muse = () => {
             >
               {/* Image placeholder */}
               {item.type === 'image' && (
-                <div className="w-full h-full bg-poster-border/50 border border-poster-border flex items-center justify-center p-4">
-                  <span className="text-poster-muted font-mono text-xs text-center">
-                    {item.placeholder}
-                  </span>
+                <div className="w-full h-full bg-poster-border/50 border border-poster-border overflow-hidden">
+                  {item.image ? (
+                    <img src={item.image} alt={item.placeholder} className="w-full h-full object-cover" />
+                  ) : (
+                    <span className="text-poster-muted font-mono text-xs text-center">
+                      {item.placeholder}
+                    </span>
+                  )}
                 </div>
               )}
 

@@ -204,7 +204,7 @@ const PosterHome = () => {
           >
             <h1 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-light text-poster-text leading-relaxed hero-text">
               Hi, I am <span className="font-normal">Monal Gupta</span>. I'm a software developer 
-              and artist who uses{' '}
+              and an artist who uses{' '}
               <span className="hero-underline">
                 the web as a medium
               </span>
@@ -243,7 +243,7 @@ const PosterHome = () => {
         >
           <h1 className="text-xl font-light text-poster-text leading-relaxed hero-text">
             Hi, I am <span className="font-normal">Monal Gupta</span>. I'm a software developer 
-            and artist who uses{' '}
+            and an artist who uses{' '}
             <span className="hero-underline">
               the web as a medium
             </span>

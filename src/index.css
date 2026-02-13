@@ -296,7 +296,7 @@
     text-decoration: underline;
     text-decoration-color: hsl(17 78% 75%);
     text-decoration-thickness: 2px;
-    text-underline-offset: -2px;
+    text-underline-offset: 4px;
     text-decoration-skip-ink: none;
   }
 
