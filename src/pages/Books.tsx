@@ -82,23 +82,39 @@ const Books = () => {
 
   /**
    * Handle book suggestion form submission
-   * Currently simulates sending (replace with actual API call)
+   * Mirrors the contact page by using a Formspree endpoint.
+   * Replace the action URL with your own Formspree form ID if desired.
    */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('https://formspree.io/f/xqedebej', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
-    // Show success notification
-    toast({
-      title: "Book suggestion received!",
-      description: `Thanks for suggesting "${formData.bookName}"! I'll add it to my reading list.`,
-    });
+      if (response.ok) {
+        toast({
+          title: 'Book suggestion received!',
+          description: `Thanks for suggesting "${formData.bookName}"! I'll add it to my reading list.`,
+        });
+        setFormData({ name: '', email: '', bookName: '', author: '' });
+      } else {
+        toast({
+          title: 'Oops!',
+          description: 'Something went wrong. Please try again later.',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'Network error. Please try again.',
+      });
+    }
 
-    // Reset form fields
-    setFormData({ name: '', email: '', bookName: '', author: '' });
     setIsSubmitting(false);
   };
 
@@ -172,7 +188,12 @@ const Books = () => {
             </p>
 
             {/* Suggestion form */}
-            <form onSubmit={handleSubmit} className="max-w-xl space-y-4">
+            <form
+              // action="https://formspree.io/f/xqedebej" // uncomment and update if you want a plain HTML fallback
+              // method="POST"
+              onSubmit={handleSubmit}
+              className="max-w-xl space-y-4"
+            >
               {/* Name and email - side by side on desktop */}
               <div className="grid md:grid-cols-2 gap-4">
                 <input

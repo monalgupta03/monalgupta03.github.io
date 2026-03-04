@@ -22,55 +22,52 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { User, Hammer, Feather, Library, Sparkles, Send } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
+import navAbout from '@/assets/HomeNav/nav-about.png';
+import navProjects from '@/assets/HomeNav/nav-projects.png';
+import navBlog from '@/assets/HomeNav/nav-blog.png';
+import navBookshelf from '@/assets/HomeNav/nav-bookshelf.png';
+import navMuse from '@/assets/HomeNav/nav-muse.png';
+import navContact from '@/assets/HomeNav/nav-contact.png';
 
 // -----------------------------------------------------------------------------
 // NAVIGATION CONFIGURATION
 // -----------------------------------------------------------------------------
 
-/**
- * Navigation items for the home page
- * Each item includes:
- *   - name: Display text
- *   - icon: Lucide icon component
- *   - path: Route to navigate to
- *   - position: Positioning for desktop (absolute) and mobile (order index)
- */
 const navItems = [
   { 
     name: 'About', 
-    icon: User, 
+    image: navAbout, 
     path: '/about',
-    position: { desktop: { top: '15%', left: '15%' }, mobile: 0 }
+    position: { desktop: { top: '12%', left: '15%' }, mobile: 0 }
   },
   { 
     name: 'Projects', 
-    icon: Hammer, 
+    image: navProjects, 
     path: '/projects',
-    position: { desktop: { top: '50%', left: '8%' }, mobile: 1 }
+    position: { desktop: { top: '42%', left: '4%' }, mobile: 1 }
   },
   { 
     name: 'Blog', 
-    icon: Feather, 
+    image: navBlog, 
     path: '/blog',
     position: { desktop: { bottom: '18%', left: '18%' }, mobile: 2 }
   },
   { 
     name: 'Bookshelf', 
-    icon: Library, 
+    image: navBookshelf, 
     path: '/books',
-    position: { desktop: { top: '15%', right: '15%' }, mobile: 3 }
+    position: { desktop: { top: '12%', right: '15%' }, mobile: 3 }
   },
   { 
     name: 'Muse', 
-    icon: Sparkles, 
+    image: navMuse, 
     path: '/muse',
-    position: { desktop: { top: '50%', right: '8%' }, mobile: 4 }
+    position: { desktop: { top: '42%', right: '4%' }, mobile: 4 }
   },
   { 
     name: 'Contact', 
-    icon: Send, 
+    image: navContact, 
     path: '/contact',
     position: { desktop: { bottom: '18%', right: '18%' }, mobile: 5 }
   },
@@ -158,7 +155,6 @@ const PosterHome = () => {
         
         {/* Radial Navigation Items - positioned absolutely around the viewport */}
         {navItems.map((item, index) => {
-          const Icon = item.icon;
           const pos = item.position.desktop;
           return (
             <motion.div
@@ -172,20 +168,19 @@ const PosterHome = () => {
               <Link
                 to={item.path}
                 onClick={(e) => handleNavClick(e, item.path)}
-                className="nav-item-poster group flex flex-col items-center gap-2"
+                className="nav-item-poster group flex flex-col items-center gap-0"
               >
-                {/* Icon with hover lift effect */}
                 <motion.div
                   className="icon-container"
                   whileHover={{ y: -8 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 >
-                  <Icon 
-                    className="w-10 h-10 lg:w-14 lg:h-14 text-poster-text" 
-                    strokeWidth={1} 
+                  <img 
+                    src={item.image} 
+                    alt={item.name}
+                    className="w-28 h-28 lg:w-32 lg:h-32 object-contain dark:invert" 
                   />
                 </motion.div>
-                {/* Label below icon */}
                 <span className="font-mono text-xs lg:text-sm text-poster-muted group-hover:text-poster-text transition-colors">
                   {item.name}
                 </span>
@@ -204,7 +199,7 @@ const PosterHome = () => {
           >
             <h1 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-light text-poster-text leading-relaxed hero-text">
               Hi, I am <span className="font-normal">Monal Gupta</span>. I'm a software developer 
-              and an artist who uses{' '}
+              and artist who uses{' '}
               <span className="hero-underline">
                 the web as a medium
               </span>
@@ -243,7 +238,7 @@ const PosterHome = () => {
         >
           <h1 className="text-xl font-light text-poster-text leading-relaxed hero-text">
             Hi, I am <span className="font-normal">Monal Gupta</span>. I'm a software developer 
-            and an artist who uses{' '}
+            and artist who uses{' '}
             <span className="hero-underline">
               the web as a medium
             </span>
@@ -257,7 +252,6 @@ const PosterHome = () => {
         {/* Vertical Navigation List */}
         <nav className="space-y-8 mb-16 text-center">
           {navItems.map((item, index) => {
-            const Icon = item.icon;
             return (
               <motion.div
                 key={item.name}
@@ -271,9 +265,10 @@ const PosterHome = () => {
                   onClick={(e) => handleNavClick(e, item.path)}
                   className="flex items-center gap-4 group"
                 >
-                  <Icon 
-                    className="w-8 h-8 text-poster-text group-hover:scale-110 transition-transform" 
-                    strokeWidth={1} 
+                  <img 
+                    src={item.image} 
+                    alt={item.name}
+                    className="w-12 h-12 object-contain dark:invert group-hover:scale-110 transition-transform" 
                   />
                   <span className="font-mono text-lg text-poster-muted group-hover:text-poster-text transition-colors">
                     {item.name}
