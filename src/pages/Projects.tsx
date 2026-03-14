@@ -19,7 +19,7 @@ const Projects = () => {
         >
           <h1 className="text-3xl md:text-4xl font-serif text-poster-text mb-4">Projects</h1>
           <p className="text-poster-muted font-light mb-16 max-w-xl">
-            A collection of things I've built — tools, experiments, and side projects.
+            A collection of things I've built - tools, experiments and side projects.
           </p>
         </motion.div>
 
