@@ -1,3 +1,6 @@
+import MandelBrotSet from '../assets/Projects/MandelBrotSet.png';
+
+
 export interface Project {
   id: string;
   title: string;
@@ -19,7 +22,7 @@ export const projects: Project[] = [
     id: 'mandelbrot-generator',
     title: 'Mandelbrot Set Generator',
     description: 'Python based Mandelbrot Set renderer optimised from 225s to 8.45s',
-    image: '/src/assets/Projects/MandelBrotSet.png',
+    image: MandelBrotSet,
     github: 'https://github.com/monalgupta03/MadelbrotGenerator',
     techStack: ['Python', 'Numba', 'NumPy', 'cProfile'],
   },

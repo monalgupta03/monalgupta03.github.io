@@ -7,7 +7,7 @@
  *   - React Query for data fetching (QueryClientProvider)
  *   - Tooltip context for UI components (TooltipProvider)
  *   - Toast notifications (Toaster, Sonner)
- *   - Client-side routing (BrowserRouter)
+ *   - Client-side routing (hashRouter)
  * 
  * All page routes are defined in the Routes component.
  * 
@@ -18,7 +18,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 // Page components - each handles its own route
 import Index from "./pages/Index";
@@ -54,7 +54,7 @@ const App = () => (
       <Sonner />
       
       {/* Client-side router */}
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           {/* Main pages */}
           <Route path="/" element={<Index />} />
@@ -70,7 +70,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THIS LINE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
