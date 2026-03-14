@@ -1,4 +1,4 @@
-import MandelBrotSet from '../assets/Projects/MandelBrotSet.png';
+import MandelBrotSet from '@/assets/Projects/MandelBrotSet.png';
 
 
 export interface Project {
