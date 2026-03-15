@@ -1,4 +1,6 @@
+import zkMarket from '@/assets/Projects/zkMarket.png';
 import MandelBrotSet from '@/assets/Projects/MandelBrotSet.png';
+import bc from '@/assets/Projects/blockchain.jpeg';
 
 
 export interface Project {
@@ -11,14 +13,6 @@ export interface Project {
 }
 export const projects: Project[] = [
   {
-    id: 'cloud-deploy',
-    title: 'Cloud Deploy CLI',
-    description: 'A command-line tool for seamless multi-cloud deployments with rollback support and health checks.',
-    image: '/placeholder.svg',
-    github: 'https://github.com/username/cloud-deploy-cli',
-    techStack: ['Go', 'AWS', 'Docker'],
-  },
-  {
     id: 'mandelbrot-generator',
     title: 'Mandelbrot Set Generator',
     description: 'Python based Mandelbrot Set renderer optimised from 225s to 8.45s',
@@ -27,12 +21,20 @@ export const projects: Project[] = [
     techStack: ['Python', 'Numba', 'NumPy', 'cProfile'],
   },
   {
-    id: 'infra-monitor',
-    title: 'Infra Monitor',
-    description: 'Infrastructure monitoring dashboard with alerting, anomaly detection, and Slack integration.',
-    image: '/placeholder.svg',
-    github: 'https://github.com/username/infra-monitor',
-    techStack: ['TypeScript', 'React', 'Prometheus'],
+    id: 'zkMarket',
+    title: 'zkMarket',
+    description: 'Trustless Web2-to-Web3 credential verification for targeted airdrops.',
+    image: zkMarket,
+    github: 'https://github.com/monalgupta03/zkDrop',
+    techStack: ['Reclaim Protocol','ZkTLS', 'Solidity', 'React', 'ethers.js'],
+  },
+  {
+    id: 'rust-blockchain',
+    title: 'Blockchain - Implementation',
+    description: 'Peer-to-peer blockchain with proof-of-work mining, built in Rust.',
+    image: bc,
+    github: 'https://github.com/monalgupta03/rust-blockchain',
+    techStack: ['Rust', 'libp2p', 'SHA-256', 'Tokio'],
   },
   {
     id: 'k8s-operator',
