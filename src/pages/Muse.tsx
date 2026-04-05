@@ -16,7 +16,17 @@
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import ThemeToggle from '@/components/ThemeToggle';
+import q1 from '@/assets/Muse/q1.jpg';
+import q2 from '@/assets/Muse/q2.jpg';
+import q3 from '@/assets/Muse/q3.jpg';
+import women from '@/assets/Muse/women.jpg';
 import CoffeePoster from '@/assets/Muse/coffee.jpg';
+import plane from '@/assets/Muse/plane.jpg';
+import eye from '@/assets/Muse/eye.jpg';
+import sunflower from '@/assets/Muse/sunflower.jpg';
+import purple from '@/assets/Muse/purple.jpg';
+import books from '@/assets/Muse/books.jpg';
+import blue_brown from '@/assets/Muse/blue-brown.jpg';
 
 // -----------------------------------------------------------------------------
 // MOOD BOARD DATA
@@ -31,17 +41,20 @@ import CoffeePoster from '@/assets/Muse/coffee.jpg';
 const moodBoardItems = [
   {
     type: 'image',
-    size: 'large',
+    size: 'medium',
+    image: women,
     placeholder: 'Vintage botanical illustration',
   },
   {
-    type: 'quote',
-    content: '"The details are not the details. They make the design."',
-    author: 'Charles Eames',
+    type: 'image',
+    size: 'small',
+    image: q1,
   },
   {
-    type: 'color',
-    colors: ['#E8D5B7', '#B8860B', '#2F4F4F'],
+    type: 'image',
+    size: 'medium',
+    image: purple,
+    placeholder: 'Deep purple gradient',
   },
   {
     type: 'image',
@@ -50,35 +63,44 @@ const moodBoardItems = [
     placeholder: 'Cozy café corner',
   },
   {
-    type: 'quote',
-    content: '"Stay soft in a world that is trying to harden you."',
+    type: 'image',
+    size: 'medium',
+    image: books,
+    placeholder: 'Vintage book collection',
   },
   {
     type: 'image',
     size: 'medium',
+    image: plane,
     placeholder: 'Japanese woodblock print',
   },
   {
-    type: 'color',
-    colors: ['#FDF5E6', '#DEB887', '#8B4513'],
+    type: 'image',
+    size: 'medium',
+    image: blue_brown,
+    placeholder: 'Blues and browns palette',
   },
   {
     type: 'image',
     size: 'small',
+    image: eye,
     placeholder: 'Old typewriter keys',
   },
   {
-    type: 'quote',
-    content: '"Create the things you wish existed."',
+    type: 'image',
+    size: 'small',
+    image: q2,
   },
   {
     type: 'image',
     size: 'medium',
+    image: sunflower,
     placeholder: 'Sunset through window blinds',
   },
   {
-    type: 'color',
-    colors: ['#FAF0E6', '#D4A574', '#6B4423'],
+    type: 'image',
+    size: 'small',
+    image: q3,
   },
   {
     type: 'image',
